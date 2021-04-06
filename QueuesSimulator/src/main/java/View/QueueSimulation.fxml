@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane prefHeight="802.0" prefWidth="1540.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SimulationController">
+   <content>
+      <AnchorPane prefHeight="780.0" prefWidth="1510.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="273.0" layoutX="652.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/QueuesSimulator.png" />
+               </image>
+            </ImageView>
+            <ScrollPane layoutX="22.0" layoutY="105.0" prefHeight="570.0" prefWidth="1510.0" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="105.0">
+               <content>
+                  <GridPane fx:id="gridPaneQueues" prefHeight="1500.0" prefWidth="3010.0" style="-fx-background-color: #ffffff;">
+                    <columnConstraints>
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints />
+                        <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+            <Button fx:id="btnBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToInputWindow" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: #f2dd52;" text="Back" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="247.0" layoutY="20.0" text="TIME:">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <HBox fx:id="hBoxWaiting" layoutX="93.0" layoutY="686.0" prefHeight="87.0" prefWidth="1437.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Group />
+               </children>
+            </HBox>
+            <Button fx:id="btnSimulation" defaultButton="true" layoutX="1058.0" layoutY="18.0" mnemonicParsing="false" onAction="#startSimulation" onMouseReleased="#disableButton" prefHeight="39.0" prefWidth="167.0" style="-fx-background-color: #f6834e;" text="Start Simulation" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Line endX="-100.00001525878906" endY="-88.4000244140625" layoutX="192.0" layoutY="773.0" startX="-100.0" strokeWidth="2.0" />
+            <Line endX="2000.0" layoutX="115.0" layoutY="685.0" startX="-100.0" strokeWidth="2.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="694.0" prefHeight="71.0" prefWidth="70.0" text="Waiting queue" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSimStatistics" disable="true" layoutX="1264.0" layoutY="18.0" mnemonicParsing="false" onAction="#loadSimulationStatisticsScene" prefHeight="39.0" prefWidth="251.0" style="-fx-background-color: #f2dd52;" text="View Simulation Statistics" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Line endX="-100.0" endY="-42.400001525878906" layoutX="1345.0" layoutY="59.0" startX="-100.0" strokeWidth="2.0" />
+            <JFXTextField fx:id="txtCurrentTime" alignment="CENTER" editable="false" focusColor="BLACK" layoutX="326.0" layoutY="16.0" prefHeight="40.0" prefWidth="106.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
